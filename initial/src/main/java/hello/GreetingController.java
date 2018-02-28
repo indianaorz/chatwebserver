@@ -33,12 +33,12 @@ public class GreetingController {
     @RequestMapping("/greeting")
     public Greeting greeting(@RequestParam(value="id", defaultValue="0") String id) {
 
-    String sql = "SELECT * FROM CUSTOMERS WHERE ID = ?";
+    String sql = "SELECT * FROM USERS WHERE ID = ?";
 
-	Customer customer = (Customer)jdbcTemplate.queryForObject(
-			sql, new Object[] { Long.parseLong(id) }, new CustomerRowMapper());
+	User user = (User)jdbcTemplate.queryForObject(
+			sql, new Object[] { Long.parseLong(id) }, new UserRowMapper());
 
     return new Greeting(counter.incrementAndGet(),
-                            String.format(template, customer.toString()));
+                            String.format(template, user.toString()));
     }
 }   
