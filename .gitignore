@@ -1,36 +1,25 @@
-# Operating System Files
-
-*.DS_Store
-Thumbs.db
-*~
-.#*
-#*
-*#
-
-# Build Files #
-
-bin
-target
-build/
 .gradle
+/build/
+!gradle/wrapper/gradle-wrapper.jar
 
-# Eclipse Project Files #
-
+### STS ###
+.apt_generated
 .classpath
+.factorypath
 .project
 .settings
+.springBeans
 
-# IntelliJ IDEA Files #
-
+### IntelliJ IDEA ###
+.idea
+*.iws
 *.iml
 *.ipr
-*.iws
-*.idea
 
-# Spring Bootstrap artifacts
-
-dependency-reduced-pom.xml
-
-mem*.db
-
-README.html
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
