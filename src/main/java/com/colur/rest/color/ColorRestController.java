@@ -34,7 +34,7 @@ class ColorRestController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
-	ResponseEntity<?> add(@PathVariable String userId, @RequestBody Color input) {
+	ResponseEntity<?> postColor(@PathVariable String userId, @RequestBody Color input) {
 		this.validateUser(userId);
 
 		return this.userRepository
