@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.net.URI;
 import java.util.Collection;
@@ -27,6 +28,7 @@ class ColorRestController {
 		this.colorRepository = colorRepository;
 	}
 
+  	@CrossOrigin
 	@RequestMapping(method = RequestMethod.GET)
 	Collection<Color> getColors(@PathVariable String userId) {
 		this.validateUser(userId);
