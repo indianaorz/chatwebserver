@@ -16,6 +16,8 @@ public class User {
     @GeneratedValue
     private Long id;
 
+    private String userGoogleId;
+
     private String username;
 
     @OneToMany(mappedBy = "user")
@@ -31,6 +33,14 @@ public class User {
         return id;
     }
 
+    public String getUserGoogleId(){
+        return userGoogleId;
+    }
+    
+    public void setUserGoogleId(String userGoogleId){
+        this.userGoogleId = userGoogleId;
+    }
+
     public String getUsername() {
         return username;
     }
@@ -39,4 +49,5 @@ public class User {
     public Set<Color> getColors() {
         return colors;
     }
+
 }
